@@ -1,8 +1,10 @@
-<h1><%= @chat_room.title %></h1>
+<h1><%= @chat.title %></h1>
 
 <div>
-  <% @chat_room.messages.each do |message| %>
-  <%= message.text %>
-  <%= message.user.username %>
+  <% @chat_messages.each do |message| %>
+  <br>
+    <strong><%= message.user.username %></strong>
+    <%= message.body %>
+  <br>
   <% end %>
 </div>
